@@ -49,4 +49,9 @@ int main(void){
     else if (n_b != 0) printf("B\n");
     else if (n_c != 0) printf("C\n");
     return 0;
+    if (/* condition */)
+    {
+        /* code */
+    }
+    
 }

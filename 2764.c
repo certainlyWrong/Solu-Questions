@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void)
+{
+    char data[9];
+    fgets(data, sizeof(data), stdin);
+    printf("%c%c/%c%c/%c%c\n", data[3], data[4], data[0], data[1], data[6], data[7]);
+    printf("%c%c/%c%c/%c%c\n", data[6], data[7], data[3], data[4], data[0], data[1]);
+    printf("%c%c-%c%c-%c%c\n", data[0], data[1], data[3], data[4], data[6], data[7]);
+    return 0;
+}
