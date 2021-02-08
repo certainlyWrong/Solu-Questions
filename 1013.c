@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include <locale.h>
 #include <stdlib.h>
+
 int main(void){
-    setlocale(LC_ALL, "Portuguese");
     int a, b, c, resultado;
     scanf("%d %d %d", &a, &b, &c);
     resultado = (a+b+abs(a-b))/2;
