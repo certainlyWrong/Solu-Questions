@@ -3,26 +3,24 @@
 
 int main()
 {
-    long long int casos = 0, tam = 0, i = 0, j = 0, K = 0;
-
-    scanf("%lld", &casos);
+    unsigned int cases = 0;
+    scanf("%u", &cases);
     setbuf(stdin, NULL);
 
-    for (i = 0; i < casos; i++)
+    while(cases)
     {
-        char strings[110] = {};
+        char string[101] = {};
+        scanf("%[^\n]s", string);
         setbuf(stdin, NULL);
-        scanf("%[^\n]s", strings);
+        int tam = strlen(string), i = 0;
 
-        tam = strlen(strings);
-
-        for (j = tam/2 - 1; j >= 0; j--)
-            printf("%c", strings[j]);
-
-        for (j = tam/2; j <= tam - 1; tam--)
-            printf("%c", strings[tam - 1]);
-
+        for (i = tam/2-1; i >= 0; i--)
+            printf("%c", string[i]);
+        for (i = tam-1; i >= tam/2; i--)
+            printf("%c", string[i]);
+        
         printf("\n");
+        cases--;
     }
     return 0;
 }
