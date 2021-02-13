@@ -1,3 +1,6 @@
+#!pyrhon3.8
+
+# adriano r. de sousa
 
 salario = float(input())
 percent = 0

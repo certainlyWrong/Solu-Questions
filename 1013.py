@@ -1,3 +1,6 @@
+#!python3.8
+
+# adriano r. de sousa
 
 values = [int(x) for x in input().split()]
 

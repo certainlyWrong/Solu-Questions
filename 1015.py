@@ -1,3 +1,6 @@
+#!python3.8
+
+# adriano r. de sousa
 
 from math import sqrt
 

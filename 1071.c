@@ -1,3 +1,5 @@
+// adriano r. de sousa
+
 #include <stdio.h>
 
 int soma_impares(int a, int b);

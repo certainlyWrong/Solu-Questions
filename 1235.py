@@ -1,3 +1,6 @@
+#1python3.8
+
+# adriano r. de sousa
 
 n = int(input())
 j = 0

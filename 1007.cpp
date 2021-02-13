@@ -1,3 +1,5 @@
+// adriano r. de sousa
+
 #include <iostream>
 using namespace std;
 

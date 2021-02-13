@@ -1,3 +1,6 @@
+#!python3.8
+
+# adriano r. de sousa
 
 i, j, k = 1, 7, 0
 

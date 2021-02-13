@@ -1,3 +1,5 @@
+// adriano r. de sousa
+
 #include <stdio.h>
 #include <math.h>
 

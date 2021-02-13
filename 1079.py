@@ -1,4 +1,6 @@
-#!python3
+#!python3.8
+
+# adriano r. de sousa
 
 casos = int(input())
 

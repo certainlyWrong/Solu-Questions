@@ -1,3 +1,5 @@
+// adriano r. de sousa
+
 #include <stdio.h>
 
 int compara_valor(int, int, int);

@@ -1,4 +1,7 @@
+// adriano r. de sousa
+
 #include <stdio.h>
+
 int main(){
     int i = 0, soma, n1 = 0, n2 = 1;
     scanf("%d", &i);

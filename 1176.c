@@ -1,3 +1,5 @@
+// adriano r. de sousa
+
 #include <stdio.h>
 
 void fib_f(long long int *fib, long long int casos);

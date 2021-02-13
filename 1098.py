@@ -1,3 +1,7 @@
+#!python3.8
+
+# adriano r. de sousa
+
 from decimal import Decimal
 
 i, j = 0, 1

@@ -1,3 +1,5 @@
+// adriano r. de sousa
+
 #include <stdio.h>
 
 #define TAM 100
