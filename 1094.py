@@ -1,7 +1,5 @@
 #!python3.8
 
-# adriano r. de sousa
-
 cases = int(input())
 
 inform, total, rabbits, rats, flogs = (), 0, 0, 0, 0

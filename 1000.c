@@ -1,5 +1,3 @@
-// adriano r. de sousa
-
 #include <stdio.h>
 
 int main(void){

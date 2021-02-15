@@ -1,6 +1,5 @@
 #!python3.8
 
-# adriano r. de sousa
 i, values = 0, list()
 while True:
     values.append([int(x) for x in input().split()])

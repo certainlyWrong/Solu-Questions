@@ -1,7 +1,5 @@
 #!python3.8
 
-# adriano r. de sousa
-
 num = int(input())
 num_in, num_out = 0, 0
 

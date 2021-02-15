@@ -1,7 +1,5 @@
 #!python3.8
 
-# adriano r. de sousa
-
 j, i = 60, 1
 
 while j >= 0:

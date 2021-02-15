@@ -1,7 +1,5 @@
 #!python3.8
 
-# adriano r. de sousa
-
 dados1 = list([float(x) for x in input().split()])
 dados2 = list([float(x) for x in input().split()])
 

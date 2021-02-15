@@ -1,4 +1,3 @@
-# adriano r. de sousa
 
 valor = float(input())
 valor2 = float('{:.2f}'.format(valor))

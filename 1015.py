@@ -1,7 +1,5 @@
 #!python3.8
 
-# adriano r. de sousa
-
 from math import sqrt
 
 pontos = [[float(x) for x in input().split()], [float(x) for x in input().split()]]

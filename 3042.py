@@ -1,7 +1,5 @@
 #!python3.8
 
-# adriano r. de sousa
-
 def positionNoel(noel, *args):
     if noel == 0:
         if args[1] == 0:

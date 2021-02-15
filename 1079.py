@@ -1,7 +1,5 @@
 #!python3.8
 
-# adriano r. de sousa
-
 casos = int(input())
 
 for i in range(casos):
