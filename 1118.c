@@ -9,7 +9,7 @@ int main(void)
     {
         float n1, n2;
 
-        while (1)
+        while (true)
         {
             scanf("%f", &n1);
             if (n1 >= 0 && n1 <= 10)
@@ -17,7 +17,7 @@ int main(void)
             printf("nota invalida\n");
         }
 
-        while (1)
+        while (true)
         {
             scanf("%f", &n2);
             if (n2 >= 0 && n2 <= 10)
@@ -26,7 +26,7 @@ int main(void)
         }
         printf("media = %.2f\n", (n1 + n2) / 2);
 
-        while (1)
+        while (true)
         {
             int d;
             printf("novo calculo (1-sim 2-nao)\n");
