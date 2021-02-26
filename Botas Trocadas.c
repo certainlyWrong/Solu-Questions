@@ -1,11 +1,5 @@
 #include <stdio.h>
 
-typedef struct 
-{
-    unsigned short tam, validar;
-    char lado;
-} par;
-
 int main(void)
 {
     long long n_botas, i, j, cont_pares;
