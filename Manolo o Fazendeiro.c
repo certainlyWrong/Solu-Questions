@@ -14,16 +14,16 @@ int main(void)
     
     int Q, colheita;
     scanf("%d", &Q);
-    int ponto[Q][4];
+    int area[Q][4];
 
     for ( i = 0, colheita = 0; i < Q; i++)
     {
         for ( j = 0; j < 4; j++)
-            scanf("%d", &ponto[i][j]);
+            scanf("%d", &area[i][j]);
 
-        for ( j = ponto[i][0] - 1; j < ponto[i][2]; j++)
+        for ( j = area[i][0] - 1; j < area[i][2]; j++)
         {
-            for ( k = ponto[i][1] - 1; k < ponto[i][3]; k++)
+            for ( k = area[i][1] - 1; k < area[i][3]; k++)
             {
                 colheita += farm[j][k];
                 farm[j][k] = 0;

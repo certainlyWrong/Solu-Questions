@@ -2,7 +2,7 @@
 
 #define TAM 4
 
-typedef struct 
+typedef struct
 {
     int move[TAM], win;
     char move_n[TAM][10];
