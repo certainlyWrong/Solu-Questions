@@ -9,7 +9,6 @@ int main(void)
     
     while(scanf("%c", &text) != EOF)
     {
-        
         if (text != 'f' && text != 'F')
         {
             bool print_caracter = true;
@@ -53,7 +52,6 @@ int main(void)
                 printf("%c", text);
                 antF = false;
             }
-            
         }
         else if (antF == false)
         {
