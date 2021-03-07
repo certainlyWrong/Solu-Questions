@@ -35,7 +35,7 @@ int main(void)
     for ( i = 0; i < N; i++)
         scanf("%lld", &array[i]);
     
-    // mais eficiente do que realizar um qsort com todas as comparações
+    // aparentemente mais eficiente do que realizar um qsort com todas as comparações
     qsort(array, N, sizeof(ll), compare1);
     qsort(array, N, sizeof(ll), compare2);
 
