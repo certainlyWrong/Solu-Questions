@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 typedef unsigned short uns;
-typedef struct 
+typedef struct
 {
     int exist, inicio, fim;
 } sequen;
 
 int compare (const void*, const void*);
 
-sequen search(uns*, uns, uns);
+sequen search(uns*, uns, uns, uns);
 
 sequen inter(uns*, uns);
 
@@ -39,14 +39,12 @@ int main(void)
         scanf("%u", &j);
 
         qsort(array, soma, sizeof(uns), compare);
-
-        if (j > array[soma-1])
+        if (j < array[0] || j > array[soma-1])
         {
             printf("%u not found\n", j);
             continue;
         }
-        
-        sequen respo = search(array, soma, j);
+        sequen respo = search(array, j, 0, soma);
         if (respo.exist == -1)
             printf("%u not found\n", j);
         else
@@ -60,57 +58,24 @@ int main(void)
 int compare (const void * a, const void * b)
 {
     if (*(uns*)a > *(uns*)b)
-            return 1;
-        return -1;
+        return 1;
+    return -1;
 }
 
-sequen search(uns* array, uns tam, uns value)
-{
-	uns min = 0, mid = (tam + min)/2;
+sequen search(uns* array, uns item, uns start, uns end)
+ {
+    int meio;
     sequen respo = {-1, 0, 0};
-
-    while (1)
+    if (start > end) return respo;
+    else
     {
-        if (array[mid] <= value)
-		{
-			if (array[mid] == value || value == array[mid-1] || value == array[mid+1])
-            {
-                if (array[mid] == value)
-                    return inter(array, mid);
-
-                else if (array[mid-1] == value)
-                    return inter(array, mid-1);
-
-                else if (array[mid+1] == value)
-                    return inter(array, mid+1);
-            }
-
-			else if (value != array[mid] && value > array[mid-1] && value < array[mid+1])
-                return respo;
-
-			min = mid;
-			mid = (tam + min)/2;
-		}
-		else if (array[mid] >= value)
-		{
-			if (array[mid] == value || value == array[mid-1] || value == array[mid+1])
-            {
-                if (array[mid] == value)
-                    return inter(array, mid);
-                    
-                else if (array[mid-1] == value)
-                    return inter(array, mid-1);
-
-                else if (array[mid+1] == value)
-                    return inter(array, mid+1);   
-            }
-
-			else if (value != array[mid] && value > array[mid-1] && value < array[mid+1])
-                return respo;
-
-			tam = mid;
-			mid = (tam + min)/2;
-		}
+        meio = (start + end) / 2;
+        if (item < array[meio]) return search(array, item, start, meio - 1);
+        else
+        {
+            if (item > array[meio]) return search(array, item, meio + 1, end);
+            else return inter(array, meio);
+        }
     }
 }
 
