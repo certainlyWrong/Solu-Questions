@@ -66,7 +66,7 @@ int search(ll* array, ll tam, ll value)
 		}
 		else if (array[mid] >= value)
 		{
-			if (array[mid] == value)
+			if (array[mid] == value || value == array[mid-1] || value == array[mid+1])
 				return 1;
 			else if (value != array[mid] && value > array[mid-1] && value < array[mid+1])
 				return 0;
