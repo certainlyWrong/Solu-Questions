@@ -21,13 +21,13 @@ int main(void)
     return 0;
 }
 
-char yesNO(ll n, ll max)
+char yesNO(ll n, ll root)
 {
     static ll i = 2;
-    if (i > max)
+    if (i > root)
         return 'N';
     else if (n % i == 0)
         return 'S';
     i++;
-    return yesNO(n, max);
+    return yesNO(n, root);
 }

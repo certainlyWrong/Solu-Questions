@@ -16,10 +16,10 @@ int main(void)
     {
         ll var;
         scanf("%lld", &var);
-        ll root = checkRoot(var);
-        if (root)
+        var = checkRoot(var);
+        if (var)
         {
-            printf(checkPrime(root, (ll)sqrtl(root), 2)? "YES\n" : "NO\n");
+            printf(checkPrime(var, (ll)sqrtl(var), 2)? "YES\n" : "NO\n");
             continue;
         }
         printf("NO\n");
@@ -36,11 +36,11 @@ ll checkRoot(ll n)
     return 0;
 }
 
-int checkPrime(ll root, ll max, ll i)
+int checkPrime(ll prime, ll root, ll i)
 {
-    if (i > max)
+    if (i > root)
         return 1;
-    else if (root % i == 0)
+    else if (prime % i == 0)
         return 0;
-    return checkPrime(root, max, ++i);
+    return checkPrime(prime, root, ++i);
 }
