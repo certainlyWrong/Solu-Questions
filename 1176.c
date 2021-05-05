@@ -1,41 +1,41 @@
-
 #include <stdio.h>
 
-void fib_f(long long int *fib, long long int casos);
+typedef long long ll;
+
+void preencheFibVetor(ll *, int);
+void printFib(ll *, int);
+ll fibResult(ll, ll, ll);
 
 int main(void)
 {
-    long long int i = 0, casos = 0;
+    int cases;
+    scanf("%d", &cases);
+    ll array[cases];
 
-    scanf("%lld", &casos);
+    preencheFibVetor(array, cases);
 
-    long long int fib[casos];
-
-    for (i = 0; i < casos; i++)
-        scanf("%lld", &fib[i]);
-
-    fib_f(fib, casos);
-    
     return 0;
 }
 
-void fib_f(long long int *fib, long long int casos)
+void preencheFibVetor(ll *fibVetor, int tamanho)
 {
-    long long int i = 0, j = 0, num_1 = 0, num_2 = 0, num_3 = 0;
+    int i;
+    for (i = 0; i < tamanho; i++)
+        scanf("%lld", &fibVetor[i]);
+    printFib(fibVetor, tamanho);
+}
 
-    for (i = 0; i < casos; i++)
-    {
-        if (fib[i] == 1)
-            num_3 = 1;
-        else
-        {
-            for (j = 0, num_1 = 0, num_2 = 1, num_3 = 0; j < fib[i] - 1; j++)
-            {
-                num_3 = num_1 + num_2;
-                num_1 = num_2;
-                num_2 = num_3;
-            }
-        }
-        printf("Fib(%lld) = %lld\n", fib[i], num_3);
-    }
+void printFib(ll *fibVetor, int tamanho)
+{
+    int i;
+    for (i = 0; i < tamanho; i++)
+        printf("Fib(%lld) = %lld\n", fibVetor[i], fibResult(0, 1, fibVetor[i]));
+}
+
+ll fibResult(ll a, ll b, ll fib)
+{
+    if (fib == 0)
+        return a;
+    
+    fibResult(a+b, a, --fib);
 }
